@@ -1,7 +1,12 @@
+image: Docker
+
+services:
+  - docker:dind
+
 stages:
   - build
 
 docker_build:
   stage: build
   script:
-    - docker-compose -f C:\Users\Davidmacgenm\OneDrive\Desktop\Projects\WordPress - zastefana\test-wordpress up -d
+    - docker compose up -d --build
