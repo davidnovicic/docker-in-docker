@@ -1,6 +1,8 @@
-demo_job_1:
-   
-     tags:
-       - ci
-     script:
-       - echo Hello World
+stages:
+  - build
+
+docker_build:
+  stage: build
+  script:
+    - docker-compose --version
+    - docker-compose -f C:\Users\Davidmacgenm\OneDrive\Desktop\Projects\WordPress - zastefana\test-wordpress up -d
