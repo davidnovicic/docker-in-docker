@@ -1,4 +1,4 @@
-image: Docker
+image: docker
 
 services:
   - docker:dind
