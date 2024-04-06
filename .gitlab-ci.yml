@@ -1,5 +1,7 @@
 deploy-job:
   stage: deploy
+  only:
+    - master
   image: docker:latest
   services:
     - docker:dind
@@ -11,5 +13,4 @@ deploy-job:
     - docker compose down
     - docker compose build
     - docker compose up -d
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: master
