@@ -14,7 +14,7 @@ docker_build:
     only: 
     - master
     script:     
-    - sudo apt install python3-pip
+    - sudo apt install -y python3-pip
     - pip install docker-compose
     - docker compose up -d --build
     environment: master
