@@ -11,7 +11,7 @@ services:
       - ./wordpress:/var/www/html
 
   mysql:
-    image: mysql:latest    
+    image: mysql:5.7    
     environment:
       MYSQL_ROOT_PASSWORD: Ninasreca1
       MYSQL_DATABASE: wordpress
