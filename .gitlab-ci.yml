@@ -1,16 +1,17 @@
-deploy-job:
-  stage: deploy
-  only:
-    - master
-  image: docker:latest
-  services:
+image: docker
+
+services: 
     - docker:dind
-  variables:
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-  script:
-    - docker info
-    - docker compose down
-    - docker compose build
-    - docker compose up -d
-  environment: master
+
+stages:
+    - deploy
+
+docker_build:
+    stage: deploy
+    only: 
+    - master
+    script:     
+    - sudo apt install python3-pip
+    - pip install docker-compose
+    - docker compose up -d --build
+    environment: master
