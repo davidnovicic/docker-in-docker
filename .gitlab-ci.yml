@@ -6,8 +6,11 @@ services:
 stages:
     - deploy
 
+
 docker_build:
     stage: deploy
+    tags:
+    - wordpress-01
     only: 
     - master
     script:     
