@@ -13,10 +13,10 @@ services:
   mysql:
     image: mysql:5.7    
     environment:
-      MYSQL_ROOT_PASSWORD: Ninasreca1
+      MYSQL_ROOT_PASSWORD: 54321
       MYSQL_DATABASE: wordpress
       MYSQL_USER: macgenm
-      MYSQL_PASSWORD: Ninasreca1
+      MYSQL_PASSWORD: 54321
 
     volumes:
       - ./mysql:/var/lib/mysql
@@ -30,7 +30,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: macgenm
-      WORDPRESS_DB_PASSWORD: Ninasreca1
+      WORDPRESS_DB_PASSWORD: 54321
       WORDPRESS_DB_NAME: wordpress
    
    
